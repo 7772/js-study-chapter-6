@@ -5,26 +5,27 @@
  * 
  */
 
-// function countSeconds(howMany) {
-//   for (var i = 1; i <= howMany; i++) {
-//     setTimeout(function() {
-//       console.log(i);
-//     }, i * 1000);
-//   }
-// };
+function countSeconds(howMany) {
+  for (var i = 1; i <= howMany; i++) {
+    setTimeout(function() {
+      console.log(i);
+    }, i * 1000);
+  }
+};
 
 // 위 코드는 지역변수 i 로만 작업을 하기때문에 setTimeout 내부의 함수가 실행될때에는
 // 이미 지역변수 i 는 4 가 되어있다.
 
-function countSeconds(howMany) {
-  for (var i = 1; i <= howMany; i++) {
-    (function(currentI) {
-      setTimeout(function() {
-        console.log(currentI);
-      }, currentI * 1000);
-    })(i);
-  }
-}
+// function countSeconds(howMany) {
+//   for (var i = 1; i <= howMany; i++) {
+//     // 실행 컨텍스트가 생성된다.
+//     (function(currentI) {
+//       setTimeout(function() {
+//         console.log(currentI);
+//       }, currentI * 1000);
+//     })(i);
+//   }
+// }
 
 countSeconds(3);
 

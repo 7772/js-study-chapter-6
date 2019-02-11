@@ -18,18 +18,13 @@ HelloFunc.prototype.call = function(func) {
   func ? func(this.greeting) : this.func(this.greeting);
 };
 
-var userFunc = function(greeting) {
-  console.log(greeting);
-};
-
 var objHello = new HelloFunc();
 
 // -------------------------------------------------------------------------------------------------------
 
-
 function saySomething(obj, methodName, name) {
   return (function(greeting) {
-    return obj([methodName](greeting, name));
+    return obj[methodName](greeting, name);
   });
 }
 
@@ -44,4 +39,4 @@ newObj.prototype.who = function(greeting, name) {
 
 var obj1 = new newObj(objHello, 'olulo');
 
-obj1.func();
+obj1.call();

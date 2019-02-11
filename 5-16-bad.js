@@ -3,7 +3,7 @@
  * 
  * 5.4.3.3 루프 안에서 클로저를 활용할 때는 주의하자
  * 
- */
+ ;*/
 
 function countSeconds(howMany) {
   for (var i = 1; i <= howMany; i++) {
@@ -13,4 +13,4 @@ function countSeconds(howMany) {
   }
 };
 
-countSeconds(3);
+countSeconds(3)

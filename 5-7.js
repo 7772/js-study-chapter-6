@@ -28,6 +28,7 @@ inner();
 // 이후, 이미 실행이 종료된 outerFunc 의 내부변수인 x 를 출력합니다.
 // innerFunc 의 [[scope]] 는 다음과 같습니다.
 
+// 2. innerFunc 의 변수객체
 // 1. outerFunc 변수객체
 // 0. 전역객체
 
